@@ -34,7 +34,7 @@ for(let i = 0;i < 502;i++) {
   .then(data => {
   //console.log(`https://cataas.com${data.url}`)
     // Process the returned data
-    renderImage(`https://cataas.com${data.url}`)
+    renderImage(`https://cataas.com/cat/${data._id}`)
   })
   .catch(error => {
     // Handle any errors that occurred during the request
