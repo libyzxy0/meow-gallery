@@ -29,12 +29,12 @@ function renderImage(url) {
 
 
 for(let i = 0;i < 502;i++) {
-    fetch('https://cataas.com/cat?json=true')
+    fetch('https://api.thecatapi.com/v1/images/search')
   .then(response => response.json())
   .then(data => {
   //console.log(`https://cataas.com${data.url}`)
     // Process the returned data
-    renderImage(`https://cataas.com/cat/${data._id}`)
+    renderImage(data[0].url)
   })
   .catch(error => {
     // Handle any errors that occurred during the request
